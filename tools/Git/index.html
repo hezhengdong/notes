@@ -12,11 +12,13 @@
         <meta name="author" content="hezhengdong">
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/tools/git/">
+        <link rel="canonical" href="https://mydomain.org/mysite/tools/Git/">
       
       
         <link rel="prev" href="../../misc/md-test-doc/">
       
+      
+        <link rel="next" href="../Ops/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +26,7 @@
     
     
       
-        <title>git - Notes</title>
+        <title>Git - Notes</title>
       
     
     
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              git
+              Git
             
           </span>
         </div>
@@ -448,6 +450,8 @@
       
         
       
+        
+      
     
     
       
@@ -502,7 +506,7 @@
           
   
   <span class="md-ellipsis">
-    git
+    Git
   </span>
   
 
@@ -513,7 +517,7 @@
         
   
   <span class="md-ellipsis">
-    git
+    Git
   </span>
   
 
@@ -535,33 +539,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#git-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      教程
+      Git-Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git-Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      进阶命令
+      Advanced-Commands
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
     <span class="md-ellipsis">
-      思考
+      Reflection
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#gitignore" class="md-nav__link">
     <span class="md-ellipsis">
       .gitignore
@@ -569,11 +583,61 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Github
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ops
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -613,38 +677,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#git-basics" class="md-nav__link">
     <span class="md-ellipsis">
-      教程
+      Git-Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git-Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      进阶命令
+      Advanced-Commands
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
     <span class="md-ellipsis">
-      思考
+      Reflection
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#gitignore" class="md-nav__link">
     <span class="md-ellipsis">
       .gitignore
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Github
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      PR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -666,8 +769,10 @@
   
 
 
-<h1 id="git">git</h1>
-<h2 id="_1">教程</h2>
+<h1 id="git">Git</h1>
+<h2 id="git-basics">Git-Basics</h2>
+<h3 id="tutorial">Tutorial</h3>
+<p>（教程）</p>
 <p>协作开发基本教程</p>
 <ul>
 <li><a href="https://www.bilibili.com/video/BV1vy4y1s7k6">尚硅谷 git 教程</a> p19-p25</li>
@@ -677,9 +782,11 @@
 <li><a href="https://www.youtube.com/watch?v=oNhKB6oLHGw">演示为一个真实的GitHub开源项目进行贡献 youtube.com</a></li>
 <li><a href="https://www.bilibili.com/video/BV19e4y1q7JJ/">正确的 github 工作流 bilibili.com</a></li>
 </ul>
-<h2 id="_2">进阶命令</h2>
+<h3 id="advanced-commands">Advanced-Commands</h3>
+<p>（进阶命令）</p>
 <p>以下文字只是简单记录思考，实际问题尚未解决（因为已知的够用了，剩下的等有实际应用场景再看，这样性价比（知识/时间）更高）。</p>
-<p>场景：<a href="https://www.bilibili.com/video/BV19e4y1q7JJ/">正确的 github 工作流 bilibili.com</a>中讲解的 <code>提交 PR 时发现远程有新提交</code> 的情况。</p>
+<p><strong>场景</strong></p>
+<p><a href="https://www.bilibili.com/video/BV19e4y1q7JJ/">正确的 github 工作流 bilibili.com</a>中讲解的 <code>提交 PR 时发现远程有新提交</code> 的情况。</p>
 <p><code>git rebase</code></p>
 <ul>
 <li>
@@ -713,7 +820,8 @@
 </li>
 <li>替代品：不知道</li>
 </ul>
-<h2 id="_3">思考</h2>
+<h3 id="reflection">Reflection</h3>
+<p>（思考）</p>
 <p>场景：由 Github 的 squash and merge（将多个 commit 合并为一个）， 想起了做 mini-spring 时作者根据 tag 版本号作为 commit 的归类，由此引发对 commit 的思考。</p>
 <p>首先产生的疑问：将多个 commit 合并会引发以下问题：</p>
 <ul>
@@ -726,7 +834,8 @@
 <li>master 分支：提供更清晰的提交历史。</li>
 </ul>
 <p>至于 tag ，可以在之后编写项目时采用这种方法，阶段性完成项目即可使用 tag 当作“里程碑”记录，也可方便归类 commit 。</p>
-<h2 id="gitignore">.gitignore</h2>
+<h3 id="gitignore">.gitignore</h3>
+<p>（大一下写的，再次看到的感受：杂乱+没必要，不想花时间重构，先放着吧）</p>
 <ol>
 <li>
 <p>空行不会匹配任何文件</p>
@@ -775,27 +884,13 @@ git check-ignore -v 文件名或目录路径
 </li>
 </ol>
 <p>两个都有破解之道，等有实际应用场景的时候再看吧</p>
-<h1 id="github">Github</h1>
+<h2 id="github">Github</h2>
+<h3 id="pr">PR</h3>
 <p>提交 PR 有分支和 Fork 两种方式</p>
 <ul>
 <li>如果你对仓库有写权限，可以直接创建一个分支，在分支中开发后提交 PR。</li>
 <li>如果你没有写权限，需要 fork 仓库到自己的账户，在 fork 的仓库中开发后提交 PR。</li>
 </ul>
-<h1 id="devops">DevOps</h1>
-<p><strong>是什么</strong></p>
-<p>DevOps 是一种文化、实践和工具的集合，旨在促进开发团队（Development）和运维团队（Operations）之间的协作与自动化，从而加速软件开发与交付过程。</p>
-<p><strong>核心</strong></p>
-<p>持续集成（CI）和持续交付（CD）是 DevOps 的关键实践之一。</p>
-<p><strong>常见工具</strong></p>
-<ul>
-<li>CI/CD 工具：Jenkins、GitHub Actions、GitLab CI/CD。</li>
-<li>配置管理：Ansible、Puppet、Chef。</li>
-<li>容器化：Docker、Kubernetes。</li>
-</ul>
-<p><strong>参考链接</strong></p>
-<p><a href="https://www.bilibili.com/video/BV1r3411F7kn/">技术蛋老师 Github Actions 工作流自动化入门核心</a></p>
-<p><a href="https://docs.github.com/zh/pages">Github Pages 官方文档</a>（里面有用到如何使用 Github Actions 工作流辅助页面发布，可以仔细看看）</p>
-<p><a href="https://docs.github.com/zh">Github 官方文档</a>中有 <code>CI/CD and DevOps</code> 的模块，里面有 <code>Github Actions</code> <code>Github Packages</code>（类似 maven） <code>Github Pages</code>。（虽然面试大概率没什么用，不过还是很实用的技术）</p>
 
 
 
