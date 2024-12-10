@@ -1,0 +1,1711 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Welcome to hzd note. This site memory my learned knowledge.">
+      
+      
+        <meta name="author" content="hezhengdong">
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/background/%E9%9B%86%E5%90%88/">
+      
+      
+        <link rel="prev" href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+      
+      
+        <link rel="next" href="../../tools/git/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+    
+    
+      
+        <title>集合 - Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-collection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              集合
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hezhengdong/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../home/" class="md-tabs__link">
+        
+  
+    
+  
+  Welcome to hzd's notes!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../HTTP-%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/" class="md-tabs__link">
+          
+  
+    
+  
+  Background
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tools/git/" class="md-tabs__link">
+          
+  
+    
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%9D%82%E9%A1%B9/md-test-doc/" class="md-tabs__link">
+          
+  
+    
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hezhengdong/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to hzd's notes!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Background
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Background
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTTP-%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP 请求响应
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JavaSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一、关键字
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Maven-MySQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    特殊文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    初始网络编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    集合
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    集合
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Collection集合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Collection集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 数组和集合的区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-colletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Colletion集合体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Collection集合概述和使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Collection集合概述和使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Collection集合遍历方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Collection集合遍历方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 迭代器遍历
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4.1 迭代器遍历">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代器的细节注意点：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Map集合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Map集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Map集合体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Map集合概述和特点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Map集合概述和特点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map集合的三种遍历方式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-hashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. HashMap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. HashMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-hashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 HashMap集合概述和特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-linkedhashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 LinkedHashMap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    杂项
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            杂项
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9D%82%E9%A1%B9/md-test-doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    测试文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9D%82%E9%A1%B9/%E4%BA%91%E7%9B%98%26p2p/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    云盘&p2p
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9D%82%E9%A1%B9/%E8%BF%90%E7%BB%B4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    运维
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Collection集合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Collection集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 数组和集合的区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-colletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Colletion集合体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Collection集合概述和使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Collection集合概述和使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Collection集合遍历方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Collection集合遍历方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 迭代器遍历
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4.1 迭代器遍历">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代器的细节注意点：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Map集合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Map集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Map集合体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Map集合概述和特点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Map集合概述和特点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      常用API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map集合的三种遍历方式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-hashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. HashMap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. HashMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-hashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 HashMap集合概述和特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-linkedhashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 LinkedHashMap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>集合</h1>
+
+<h2 id="1-collection">1. Collection集合</h2>
+<h3 id="11">1.1 数组和集合的区别</h3>
+<ul>
+<li>相同点</li>
+</ul>
+<p>都是容器,可以存储多个数据</p>
+<ul>
+<li>
+<p>不同点</p>
+</li>
+<li>
+<p>数组的长度是不可变的,集合的长度是可变的</p>
+</li>
+<li>
+<p>数组可以存基本数据类型和引用数据类型</p>
+<p>集合只能存引用数据类型,如果要存基本数据类型,需要存对应的包装类</p>
+</li>
+</ul>
+<h3 id="12-colletion">1.2 Colletion集合体系结构</h3>
+<pre class="mermaid"><code>graph TD;
+    A{Collection}--&gt;B{List};
+    B--&gt;B1(ArrayList);
+    B--&gt;B2(LinkedList);
+    B--&gt;B3(Vector);
+    A--&gt;C{Set};
+    C--&gt;C1(HashSet);
+    C--&gt;C2(TreeSet);
+    C1--&gt;C11(LinkedHashSet);</code></pre>
+<p>List系列集合：添加的元素是有序，可重复，有索引的</p>
+<p>Set系列集合：添加到元素是无序，不重复，无索引的</p>
+<h3 id="13-collection">1.3 Collection集合概述和使用</h3>
+<h5 id="api">常用API</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">方法名</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">boolean add(E e)</td>
+<td style="text-align: left;">添加元素</td>
+</tr>
+<tr>
+<td style="text-align: left;">boolean remove(Object o)</td>
+<td style="text-align: left;">从集合中移除指定的元素</td>
+</tr>
+<tr>
+<td style="text-align: left;">boolean removeIf(Object o)</td>
+<td style="text-align: left;">根据条件进行移除</td>
+</tr>
+<tr>
+<td style="text-align: left;">void   clear()</td>
+<td style="text-align: left;">清空集合中的元素</td>
+</tr>
+<tr>
+<td style="text-align: left;">boolean contains(Object o)</td>
+<td style="text-align: left;">判断集合中是否存在指定的元素</td>
+</tr>
+<tr>
+<td style="text-align: left;">boolean isEmpty()</td>
+<td style="text-align: left;">判断集合是否为空</td>
+</tr>
+<tr>
+<td style="text-align: left;">int   size()</td>
+<td style="text-align: left;">集合的长度，也就是集合中元素的个数</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_1">代码实现</h5>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collection</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">A01_CollectionDemo1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="cm">/*</span>
+<span class="cm">        public boolean add(E e)             添加</span>
+<span class="cm">        public void clear()                 清空</span>
+<span class="cm">        public boolean remove(E e)          删除</span>
+<span class="cm">        public boolean contains(Object obj) 判断是否包含</span>
+<span class="cm">        public boolean isEmpty()            判断是否为空</span>
+<span class="cm">        public int size()                   集合长度</span>
+
+
+<span class="cm">       注意点：</span>
+<span class="cm">        Collection是一个接口,我们不能直接创建他的对象。</span>
+<span class="cm">        所以，现在我们学习他的方法时，只能创建他实现类的对象。</span>
+<span class="cm">        实现类：ArrayList</span>
+<span class="cm">*/</span>
+<span class="w">        </span><span class="c1">//目的：为了学习Collection接口里面的方法</span>
+<span class="w">        </span><span class="c1">//自己在做一些练习的时候，还是按照之前的方式去创建对象。</span>
+<span class="w">        </span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+
+<span class="w">        </span><span class="c1">//1.添加元素</span>
+<span class="w">        </span><span class="c1">//细节1：如果我们要往List系列集合中添加数据，那么方法永远返回true，因为List系列的是允许元素重复的。</span>
+<span class="w">        </span><span class="c1">//细节2：如果我们要往Set系列集合中添加数据，如果当前要添加元素不存在，方法返回true，表示添加成功。</span>
+<span class="w">        </span><span class="c1">//                                       如果当前要添加的元素已经存在，方法返回false，表示添加失败。</span>
+<span class="w">        </span><span class="c1">//                                       因为Set系列的集合不允许重复。</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;aaa&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;bbb&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;ccc&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coll</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//2.清空</span>
+<span class="w">        </span><span class="c1">//coll.clear();</span>
+
+<span class="w">        </span><span class="c1">//3.删除</span>
+<span class="w">        </span><span class="c1">//细节1：因为Collection里面定义的是共性的方法，所以此时不能通过索引进行删除。只能通过元素的对象进行删除。</span>
+<span class="w">        </span><span class="c1">//细节2：方法会有一个布尔类型的返回值，删除成功返回true，删除失败返回false</span>
+<span class="w">        </span><span class="c1">//如果要删除的元素不存在，就会删除失败。</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coll</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;aaa&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coll</span><span class="p">);</span>
+
+
+<span class="w">        </span><span class="c1">//4.判断元素是否包含</span>
+<span class="w">        </span><span class="c1">//细节：底层是依赖equals方法进行判断是否存在的。</span>
+<span class="w">        </span><span class="c1">//所以，如果集合中存储的是自定义对象，也想通过contains方法来判断是否包含，那么在javabean类中，一定要重写equals方法。</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coll</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;bbb&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result1</span><span class="p">);</span>
+
+
+
+<span class="w">        </span><span class="c1">//5.判断集合是否为空</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coll</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">result2</span><span class="p">);</span><span class="c1">//false</span>
+
+
+<span class="w">        </span><span class="c1">//6.获取集合的长度</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;ddd&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coll</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">size</span><span class="p">);</span><span class="c1">//3</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="14-collection">1.4 Collection集合遍历方式</h3>
+<ul>
+<li>迭代器遍历</li>
+<li>增强for遍历</li>
+<li>Lambda表达式遍历</li>
+</ul>
+<h4 id="141">1.4.1 迭代器遍历</h4>
+<p><span style="color:blue">迭代器在Java中的类是Iterator，迭代器是集合专用的遍历方式</span></p>
+<p><mark>迭代器就好比是一个箭头，默认执行集合的0索引处</mark></p>
+<p>最大特点：迭代器不依赖索引，像数组一样靠偏移</p>
+<h5 id="_2">常用方法</h5>
+<ul>
+<li>Collection集合获取迭代器</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Iterator中的常用方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean hasNext()</td>
+<td>判断当前位置是否有元素，有元素则返回true，没有元素返回false</td>
+</tr>
+<tr>
+<td>E next()</td>
+<td>获取当前位置的元素，并将迭代器对象移向下一个位置</td>
+</tr>
+</tbody>
+</table>
+<h5 id="_3">代码实现</h5>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collection</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Iterator</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">A03_CollectionDemo3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">            Collection系列集合三种通用的遍历方式：</span>
+<span class="cm">                1.迭代器遍历</span>
+<span class="cm">                2.增强for遍历</span>
+<span class="cm">                3.lambda表达式遍历</span>
+
+
+<span class="cm">             迭代器遍历相关的三个方法：</span>
+<span class="cm">                    Iterator&lt;E&gt; iterator()  ：获取一个迭代器对象</span>
+<span class="cm">                    boolean hasNext()       ：判断当前指向的位置是否有元素</span>
+<span class="cm">                    E next()                ：获取当前指向的元素并移动指针</span>
+<span class="cm">        */</span>
+
+<span class="w">        </span><span class="c1">//1.创建集合并添加元素</span>
+<span class="w">        </span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;aaa&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;bbb&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;ccc&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">coll</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;ddd&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//2.获取迭代器对象</span>
+<span class="w">        </span><span class="c1">//迭代器就好比是一个箭头，默认指向集合的0索引处</span>
+<span class="w">        </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coll</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//3.利用循环不断的去获取集合中的每一个元素</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
+<span class="w">            </span><span class="c1">//4.next方法的两件事情：获取元素并移动指针</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="_4">迭代器的细节注意点：</h5>
+<ol>
+<li>
+<p>报错NoSuchElementException</p>
+</li>
+<li>
+<p>迭代器遍历完毕，指针不会复位</p>
+</li>
+</ol>
+<p>如果要继续第二次遍历集合，只能再获取一个新的迭代器对象</p>
+<ol>
+<li>
+<p>循环中只能用一次next方法（不然可能会报错）</p>
+</li>
+<li>
+<p>迭代器遍历时，不能用集合的方法进行增加或者删除（得看源码）</p>
+</li>
+</ol>
+<h2 id="1-map">1. Map集合</h2>
+<h3 id="11-map">1.1 Map集合体系结构</h3>
+<pre class="mermaid"><code>graph TD;
+    A(Map) --&gt; B(HashMap);
+    A --&gt; C(TreeMap);
+    B --&gt; D(LinkedHashMap);
+    A --&gt; E(HashTable);
+    E --&gt; F(Properties);
+    G(Dictionary) --&gt; E;</code></pre>
+<h3 id="12-map">1.2 Map集合概述和特点</h3>
+<h5 id="_5">概述</h5>
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="n">K</span><span class="p">,</span><span class="n">V</span><span class="o">&gt;</span><span class="w">  </span><span class="n">K</span><span class="err">：</span><span class="n">键的类型</span><span class="err">；</span><span class="n">V</span><span class="err">：</span><span class="n">值的类型</span>
+</code></pre></div>
+<h5 id="api_1">常用API</h5>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V   put(K key,V   value)</td>
+<td>添加元素</td>
+</tr>
+<tr>
+<td>V   remove(Object key)</td>
+<td>根据键删除键值对元素</td>
+</tr>
+<tr>
+<td>void   clear()</td>
+<td>移除所有的键值对元素</td>
+</tr>
+<tr>
+<td>boolean containsKey(Object key)</td>
+<td>判断集合是否包含指定的键</td>
+</tr>
+<tr>
+<td>boolean containsValue(Object value)</td>
+<td>判断集合是否包含指定的值</td>
+</tr>
+<tr>
+<td>boolean isEmpty()</td>
+<td>判断集合是否为空</td>
+</tr>
+<tr>
+<td>int size()</td>
+<td>集合的长度，也就是集合中键值对的个数</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">A01_MapDemo1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">            V put(K key,V value)                    添加元素</span>
+<span class="cm">            V remove(Object key)                    根据键删除键值对元素</span>
+<span class="cm">            void clear()                            移除所有的键值对元素</span>
+<span class="cm">            boolean containsKey(Object key)         判断集合是否包含指定的键</span>
+<span class="cm">            boolean containsValue(Object value)     判断集合是否包含指定的值</span>
+<span class="cm">            boolean isEmpty()                       判断集合是否为空</span>
+<span class="cm">            int size()                              集合的长度，也就是集合中键值对的个数</span>
+<span class="cm">        */</span>
+
+
+<span class="w">        </span><span class="c1">//1.创建Map集合的对象</span>
+<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">//2.添加元素</span>
+<span class="w">        </span><span class="c1">//put方法的细节：</span>
+<span class="w">        </span><span class="c1">//添加/覆盖</span>
+<span class="w">        </span><span class="c1">//在添加数据的时候，如果键不存在，那么直接把键值对对象添加到map集合当中,方法返回null</span>
+<span class="w">        </span><span class="c1">//在添加数据的时候，如果键是存在的，那么会把原有的键值对对象覆盖，会把被覆盖的值进行返回。</span>
+
+<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;郭靖&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;黄蓉&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;韦小宝&quot;</span><span class="p">,</span><span class="s">&quot;沐剑屏&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">m</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;尹志平&quot;</span><span class="p">,</span><span class="s">&quot;小龙女&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//String value2 = m.put(&quot;韦小宝&quot;, &quot;双儿&quot;);</span>
+<span class="w">        </span><span class="c1">//System.out.println(value2);</span>
+
+<span class="w">        </span><span class="c1">//删除</span>
+<span class="w">        </span><span class="c1">//String result = m.remove(&quot;郭靖&quot;);//黄蓉</span>
+<span class="w">        </span><span class="c1">//System.out.println(result);</span>
+
+<span class="w">        </span><span class="c1">//清空</span>
+<span class="w">        </span><span class="c1">//m.clear();</span>
+
+<span class="w">        </span><span class="c1">//判断是否包含</span>
+<span class="w">        </span><span class="cm">/*boolean keyResult = m.containsKey(&quot;郭靖&quot;);</span>
+<span class="cm">        System.out.println(keyResult);</span>
+
+<span class="cm">        boolean valueResult = m.containsValue(&quot;小龙女2&quot;);</span>
+<span class="cm">        System.out.println(valueResult);*/</span>
+
+<span class="w">       </span><span class="cm">/* boolean result = m.isEmpty();</span>
+<span class="cm">        System.out.println(result);*/</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+
+
+<span class="w">        </span><span class="c1">//3.打印集合</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="map">Map集合的三种遍历方式</h5>
+<ol>
+<li>
+<p>键找值</p>
+</li>
+<li>
+<p>键值对</p>
+</li>
+<li>
+<p>Lambda表达式</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">map</span><span class="p">.</span><span class="na">forEach</span><span class="p">((</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value</span><span class="p">));</span>
+</code></pre></div>
+<h2 id="2-hashmap">2. HashMap</h2>
+<h3 id="21-hashmap">2.1 HashMap集合概述和特点</h3>
+<p>没有格外方法，跟Map方法一样。</p>
+<p>由键决定：无序，不重复，无索引</p>
+<p>底层原理</p>
+<ul>
+<li>HashMap底层是哈希表结构的</li>
+<li>依赖hashCode方法和equals方法保证键的唯一</li>
+<li>如果键要存储的是自定义对象，需要重写hashCode和equals方法</li>
+</ul>
+<h3 id="22-linkedhashmap">2.2 LinkedHashMap</h3>
+<ul>
+<li>由键决定：有序，不重复，无索引</li>
+<li>有序指的是存储和取出的元素顺序一致</li>
+<li><span style="color:red">原理</span>：底层数据结构依然是哈希表，只是每个键值对元素由额外的多了一个双链表的机制激励存储的顺序</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
