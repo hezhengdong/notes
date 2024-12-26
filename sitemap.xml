@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/misc/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/misc/MkDocs-Material/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/misc/md-test-doc/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/record/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/record/Algorithm/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/tools/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/tools/Git/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/tools/Ops/</loc>
-         <lastmod>2024-12-24</lastmod>
+         <lastmod>2024-12-26</lastmod>
     </url>
 </urlset>

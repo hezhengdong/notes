@@ -26,7 +26,7 @@
     
     
       
-        <title>Algorithm - Notes</title>
+        <title>algorithm - Notes</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Algorithm
+              algorithm
             
           </span>
         </div>
@@ -552,7 +552,7 @@
           
   
   <span class="md-ellipsis">
-    Algorithm
+    algorithm
   </span>
   
 
@@ -563,7 +563,7 @@
         
   
   <span class="md-ellipsis">
-    Algorithm
+    algorithm
   </span>
   
 
@@ -688,6 +688,60 @@
   <a href="#337-iii" class="md-nav__link">
     <span class="md-ellipsis">
       337-打家劫舍III
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-" class="md-nav__link">
+    <span class="md-ellipsis">
+      121-买卖股票的最佳时机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      122-买卖股票的最佳时机II
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      123-买卖股票的最佳时机III
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#188-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      188-买卖股票的最佳时机IV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#309-" class="md-nav__link">
+    <span class="md-ellipsis">
+      309-买卖股票的最佳时机含冷冻期
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#714-" class="md-nav__link">
+    <span class="md-ellipsis">
+      714-买卖股票的最佳时机含手续费
     </span>
   </a>
   
@@ -956,6 +1010,60 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#121-" class="md-nav__link">
+    <span class="md-ellipsis">
+      121-买卖股票的最佳时机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      122-买卖股票的最佳时机II
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      123-买卖股票的最佳时机III
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#188-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      188-买卖股票的最佳时机IV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#309-" class="md-nav__link">
+    <span class="md-ellipsis">
+      309-买卖股票的最佳时机含冷冻期
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#714-" class="md-nav__link">
+    <span class="md-ellipsis">
+      714-买卖股票的最佳时机含手续费
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -979,7 +1087,7 @@
   
 
 
-<h1 id="algorithm">Algorithm</h1>
+<h1 id="algorithm">algorithm</h1>
 <h2 id="_1">动态规划</h2>
 <h3 id="_2">完全背包</h3>
 <p>完全背包指每个物品都有无数个。</p>
@@ -1263,6 +1371,125 @@
 </ul>
 </li>
 </ol>
+<h3 id="121-">121-买卖股票的最佳时机</h3>
+<blockquote>
+<p>买卖股票的前两道题其实都可以用更好理解的贪心做出来，但是想要完全做出买卖股票这个系列，还是得用动态规划算法。</p>
+</blockquote>
+<p><strong>关键</strong></p>
+<ul>
+<li>
+<p>dp 数组的含义，这个看视频就好。</p>
+<ul>
+<li>关键是理解“当天持有股票”是什么意思，与“当天买入股票”是两码事，易混淆。</li>
+</ul>
+</li>
+<li>
+<p>递推公式：</p>
+<ul>
+<li>
+<p>概念。视频中概念描述得不太好理解，概念这么说会好理解些：</p>
+<ul>
+<li>持有股票的最大金额 == 为了持有股票所花费的最小金额，由于是花费，所以是负数。</li>
+<li>不持有股票的最大金额 == 卖出股票所赚得的最大金额。</li>
+</ul>
+</li>
+<li>
+<p>公式：</p>
+<ul>
+<li>
+<p>实际推导一下图就很好理解了。</p>
+<p>输入：<code>[7, 1, 5, 3, 6, 4]</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>dp[i][0]</code></th>
+<th><code>dp[i][1]</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>-7</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>-1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>-1</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="122-ii">122-买卖股票的最佳时机II</h3>
+<p>与 <code>I</code> 的唯一区别：</p>
+<ul>
+<li><code>dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] - prices[i]);</code></li>
+<li><code>I</code> 只能买卖一次股票，所以这里花费的钱，只需为每张股票所需花费的价格即可。</li>
+<li><code>II</code> 能买卖多次股票，所以这里花费的钱，应该为 <code>(之前赚的钱 - 买股票花费的钱)</code></li>
+</ul>
+<p>对于这道题，其实我没透彻理解这个状态转移公式……</p>
+<p>看不懂，放弃了，刷到后面看情况吧。</p>
+<p>或许关键是看懂子问题？感觉自己陷入误区了，妄图去理解动态规划的全貌，导致脑袋爆栈。</p>
+<p>[12.24] 五天后回头看这里的疑惑，发现状态转移公式还是很好理解的。</p>
+<ul>
+<li>今天持有股票所拥有的钱 = Math.max(前一天持有股票所拥有的钱, 前一天不持有股票 - 今天买股票所花费的钱);</li>
+<li>今天不持有股票所拥有的钱 = Math.max(前一天不持有股票所拥有的钱, 前一天持有股票所拥有的钱 + 今天卖股票所赚得的钱);</li>
+</ul>
+<p>做算法果然不能钻牛角尖，适当放下，回头再看，思路就会清晰很多了。</p>
+<h3 id="123-iii">123-买卖股票的最佳时机III</h3>
+<p>股票至多可买卖 2 次。</p>
+<p>上一题的基础上多了几个状态。</p>
+<h3 id="188-iv">188-买卖股票的最佳时机IV</h3>
+<p>股票至多可买卖 k 次。</p>
+<p>需要将上一题抽象为可用变量表示的通式。</p>
+<h3 id="309-">309-买卖股票的最佳时机含冷冻期</h3>
+<p>在 II 的基础上加上了冷冻期，较难。</p>
+<p>重点</p>
+<ul>
+<li>定义 dp 数组<ul>
+<li>未持有股票需划分为 3 种<ul>
+<li>当前卖入股票状态。</li>
+<li>冷冻期状态。</li>
+<li>冷冻期后未持有股票状态。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>递推公式<ul>
+<li>关键是搞清楚四种状态间的转移关系</li>
+<li><img alt="" src="https://code-thinking-1253855093.file.myqcloud.com/pics/518d5baaf33f4b2698064f8efb42edbf.png" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="714-">714-买卖股票的最佳时机含手续费</h3>
+<p>在 II 的基础上加上了手续费，较简单。</p>
+<p>只需在每次买卖股票时，状态转移公式中金额减去手续费即可。</p>
 
 
 
