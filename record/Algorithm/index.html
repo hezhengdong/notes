@@ -747,6 +747,60 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      子序列问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#300-" class="md-nav__link">
+    <span class="md-ellipsis">
+      300-最长递增子序列
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#674-" class="md-nav__link">
+    <span class="md-ellipsis">
+      674-最长连续递增序列
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#718-" class="md-nav__link">
+    <span class="md-ellipsis">
+      718-最长重复子数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1143-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1143-最长公共子序列
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1035-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1035-不相交的线
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1059,6 +1113,60 @@
   <a href="#714-" class="md-nav__link">
     <span class="md-ellipsis">
       714-买卖股票的最佳时机含手续费
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      子序列问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#300-" class="md-nav__link">
+    <span class="md-ellipsis">
+      300-最长递增子序列
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#674-" class="md-nav__link">
+    <span class="md-ellipsis">
+      674-最长连续递增序列
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#718-" class="md-nav__link">
+    <span class="md-ellipsis">
+      718-最长重复子数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1143-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1143-最长公共子序列
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1035-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1035-不相交的线
     </span>
   </a>
   
@@ -1490,6 +1598,128 @@
 <h3 id="714-">714-买卖股票的最佳时机含手续费</h3>
 <p>在 II 的基础上加上了手续费，较简单。</p>
 <p>只需在每次买卖股票时，状态转移公式中金额减去手续费即可。</p>
+<h3 id="_5">子序列问题</h3>
+<h3 id="300-">300-最长递增子序列</h3>
+<p>定义 dp 数组：dp[i] 表示以 nums[i] 为结尾的最长递增子序列的长度。</p>
+<p><strong>重点</strong>：手动画图模拟感受一下过程。</p>
+<table>
+<thead>
+<tr>
+<th>10</th>
+<th>9</th>
+<th>2</th>
+<th>5</th>
+<th>3</th>
+<th>7</th>
+<th>101</th>
+<th>18</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分析</strong></p>
+<p>初始状态：当前的小范围内，最长子序列的长度为 1（①）</p>
+<p>子问题：</p>
+<ul>
+<li>当范围 +1 时，需要将新加入进来的 nums[i] 逐个与先前范围内的 nums[j]（即前面最长公共子序列的最后一个也是最大的一个元素）作比较。（②）</li>
+<li>如果比最后一个元素还大，那么说明 dp[j]+1 可能是 dp[i] 的值。（②）</li>
+<li>逐个比较，dp[i] 的最终值为逐个比较后的最大值。（这步也是递推公式③的体现）</li>
+</ul>
+<p>返回值为 dp 数组的最大值。（④）</p>
+<p><strong>代码与分析的对应</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">lengthOfLIS</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 存储结果</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 定义 dp 数组</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">len</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 1 初始化</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// 遍历</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// 2</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// 3</span>
+<span class="w">                </span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// 4 返回值</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="674-">674-最长连续递增序列</h3>
+<p>与上一题的对比</p>
+<ul>
+<li>题意区别：<ul>
+<li>上一题不要求连续</li>
+<li>本题要求连续。</li>
+</ul>
+</li>
+<li>逻辑区别：<ul>
+<li>上一题由于不要求连续，所以每当向后遍历一位数组后，都要再次遍历前面的数组。逐个对比，判断新值是否能够插入前面任意的一个最长序列。如果能则 +1，否则不变。</li>
+<li>本题由于要求连续，所以每当向后遍历一位数组后，只与当前位置的前一个元素做对比。</li>
+</ul>
+</li>
+<li>代码区别：<ul>
+<li>少了层 for 循环，还有递推公式的判断（对比元素的区别）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="718-">718-最长重复子数组</h3>
+<p><strong>关键</strong></p>
+<ul>
+<li>定义 dp 数组：<code>dp[i][j]</code> 是以 i-1 与 j-1 元素作为结尾的公共子数组的长度。</li>
+<li>递推公式：<ul>
+<li>如果 <code>dp[i-1] != dp[j-1]</code>，<code>dp[i][j] = 0</code>。</li>
+<li>如果 <code>dp[i-1] == dp[j-1]</code>，<code>dp[i][j] = dp[i-1][j-1] + 1</code>。</li>
+</ul>
+</li>
+<li>初始化：定义 dp 数组时，以 i-1 与 j-1 作为结尾是为了避免初始化。<ul>
+<li>如果 i,j=0，<code>dp[i][j]</code> 未定义，默认初始化为 0，<code>dp[i][1]</code> 与 <code>dp[1][j]</code> 按照 <code>dp[i][0]</code> 与 <code>dp[0][j]</code> 在递推公式中求出。</li>
+<li>如果 i,j=1，还需要遍历 <code>dp[i][0]</code> <code>dp[0][j]</code>，根据是否相等，判断初始化为 0 或 1，复杂度增加。</li>
+</ul>
+</li>
+<li>遍历顺序：就是依次遍历二维数组。</li>
+</ul>
+<h3 id="1143-">1143-最长公共子序列</h3>
+<p>上一题要求公共序列元素连续，本题不要求连续。</p>
+<p><strong>区别</strong></p>
+<p>最大的区别在于递推公式：</p>
+<ul>
+<li><code>if(text1.charAt(i - 1) == text2.charAt(j - 1))</code><ul>
+<li><code>dp[i][j] = dp[i - 1][j - 1] + 1;</code></li>
+</ul>
+</li>
+<li><code>if(text1.charAt(i - 1) == text2.charAt(j - 1))</code><ul>
+<li><code>dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);</code></li>
+<li>解释：<ul>
+<li>例如 abc 与 ace 做对比，c != e。</li>
+<li>所以对比 abc 与 ac 或 ab 与 ace，二者比较然后取最大值。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定义 dp 数组：<code>dp[i][j]</code> 是 nums1 范围 [0, i-1] 与 nums2 范围 [0, j-1] 公共子序列的长度。</p>
+<p>返回值：根据 dp 数组定义，直接返回 <code>dp[len1][len2]</code> 即可。</p>
+<h3 id="1035-">1035-不相交的线</h3>
+<p>就是最长公共子序列问题，需要转换问题，看出本质。</p>
 
 
 
