@@ -12,10 +12,10 @@
         <meta name="author" content="hezhengdong">
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/Database/Lab3/">
+        <link rel="canonical" href="https://mydomain.org/mysite/database/Lab3/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../Lab2/">
       
       
         <link rel="next" href="../../misc/">
@@ -401,6 +401,8 @@
       
         
       
+        
+      
     
     
       
@@ -443,6 +445,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1680,7 +1703,7 @@ end</code></pre>
 <h3 id="_12">成本估算概述</h3>
 <p>System R 是基于成本的优化器，需要从所有可能的路径中比较成本，选择成本最低的连接。</p>
 <p>相关计算的关系如下图：</p>
-<p><img alt="image-20250228122948407" src="Lab3.assets/image-20250228122948407.png" /></p>
+<p><img alt="image-20250228122948407" src="../Lab3.assets/image-20250228122948407.png" /></p>
 <p>成本计算公式：<span class="arithmatex">\(成本 = 常数缩放因子 \times  I/O 成本 + CPU 成本\)</span></p>
 <ul>
 <li>常数缩放因子：SimpleDB 中为了使 I/O 成本与 CPU 成本可比较，假设 I/O 成本为 CPU 成本的 1000 倍。</li>
@@ -1852,7 +1875,7 @@ end</code></pre>
 <li><code>A join1 (D join3 (B join2 C))</code>、<code>(D join3 (B join2 C)) join1 A</code> 比较成本。</li>
 <li>假设 <code>(D join3 (B join2 C)) join1 A</code> 成本最小。</li>
 </ul>
-<p><img alt="image-20250301153928538" src="Lab3.assets/image-20250301153928538.png" /></p>
+<p><img alt="image-20250301153928538" src="../Lab3.assets/image-20250301153928538.png" /></p>
 <p>最终构建出成本最小的 Join 连接。</p>
 <p><strong>可能的疑问</strong></p>
 <p>System R 采用的不是左深树结构吗？上图最终构建出的却只是一个普通的连接树。</p>
