@@ -1477,7 +1477,7 @@
 <h2 id="sql">SQL解析流程</h2>
 <h3 id="_5">简单流程</h3>
 <p>一个查询语句的简单流程：一个语句经过 Parser （SimpleDB 中通过 Zql 库解析）后会得到一个抽象语法树（AST），首先用经过<strong>合法性检查</strong>后的 AST 生成一个逻辑计划，接着会进行去关联化、谓词下推、聚合下推等<strong>规则化优化</strong>（RBO），然后通过<strong>统计数据</strong>计算<strong>代价</strong>（CBO）选择最优的物理计划，最后执行。</p>
-<p><img src="Lab3.assets/image-20250227212323943.png" alt="image-20250227212323943" style="zoom: 67%;" /></p>
+<p><img alt="SQL解析流程图" src="../Lab3.assets/SQL%E8%A7%A3%E6%9E%90%E6%B5%81%E7%A8%8B%E5%9B%BE.png" /></p>
 <h3 id="logicalplanphysicalplan">LogicalPlan&amp;PhysicalPlan</h3>
 <p>理解解析器的重点：逻辑执行计划和物理执行计划。</p>
 <ul>
@@ -1703,7 +1703,7 @@ end</code></pre>
 <h3 id="_12">成本估算概述</h3>
 <p>System R 是基于成本的优化器，需要从所有可能的路径中比较成本，选择成本最低的连接。</p>
 <p>相关计算的关系如下图：</p>
-<p><img alt="image-20250228122948407" src="../Lab3.assets/image-20250228122948407.png" /></p>
+<p><img alt="四个估算公式间的关系" src="../Lab3.assets/%E5%9B%9B%E4%B8%AA%E4%BC%B0%E7%AE%97%E5%85%AC%E5%BC%8F%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB.png" /></p>
 <p>成本计算公式：<span class="arithmatex">\(成本 = 常数缩放因子 \times  I/O 成本 + CPU 成本\)</span></p>
 <ul>
 <li>常数缩放因子：SimpleDB 中为了使 I/O 成本与 CPU 成本可比较，假设 I/O 成本为 CPU 成本的 1000 倍。</li>
@@ -1875,7 +1875,7 @@ end</code></pre>
 <li><code>A join1 (D join3 (B join2 C))</code>、<code>(D join3 (B join2 C)) join1 A</code> 比较成本。</li>
 <li>假设 <code>(D join3 (B join2 C)) join1 A</code> 成本最小。</li>
 </ul>
-<p><img alt="image-20250301153928538" src="../Lab3.assets/image-20250301153928538.png" /></p>
+<p><img alt="Join优化器过程" src="../Lab3.assets/Join%E4%BC%98%E5%8C%96%E5%99%A8%E8%BF%87%E7%A8%8B.png" /></p>
 <p>最终构建出成本最小的 Join 连接。</p>
 <p><strong>可能的疑问</strong></p>
 <p>System R 采用的不是左深树结构吗？上图最终构建出的却只是一个普通的连接树。</p>
