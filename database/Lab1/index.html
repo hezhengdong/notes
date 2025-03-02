@@ -12,11 +12,13 @@
         <meta name="author" content="hezhengdong">
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/tools/Ops/">
+        <link rel="canonical" href="https://mydomain.org/mysite/database/Lab1/">
       
       
-        <link rel="prev" href="../Git/">
+        <link rel="prev" href="../">
       
+      
+        <link rel="next" href="../Lab2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +26,7 @@
     
     
       
-        <title>Ops - Notes</title>
+        <title>Lab1 - Notes</title>
       
     
     
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ops" class="md-skip">
+        <a href="#lab1" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ops
+              Lab1
             
           </span>
         </div>
@@ -238,11 +240,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../database/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -298,13 +302,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../tools/" class="md-tabs__link">
           
   
     
@@ -386,6 +388,8 @@
       
   
   
+    
+  
   
   
     
@@ -404,19 +408,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../database/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -427,13 +434,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Database
@@ -446,10 +453,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../database/Lab1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lab1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -458,6 +485,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简历
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储引擎基本组件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="存储引擎基本组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      关系图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      页式存储
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      组件的文字描述
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      位图&amp;元组管理系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="位图&元组管理系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      页的初始化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      槽位处理方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -470,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/Lab2/" class="md-nav__link">
+      <a href="../Lab2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database/Lab3/" class="md-nav__link">
+      <a href="../Lab3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -707,8 +856,6 @@
       
   
   
-    
-  
   
   
     
@@ -725,22 +872,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../tools/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -751,13 +895,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Tools
@@ -773,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Git/" class="md-nav__link">
+      <a href="../../tools/Git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,30 +935,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Ops
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tools/Ops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -823,44 +947,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#devops" class="md-nav__link">
-    <span class="md-ellipsis">
-      DevOps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-ops-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple-Ops-Process
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -900,20 +986,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#devops" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      DevOps
+      简历
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#simple-ops-process" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Simple-Ops-Process
+      存储引擎基本组件
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="存储引擎基本组件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      关系图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      页式存储
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      组件的文字描述
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      位图&amp;元组管理系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="位图&元组管理系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      页的初始化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      槽位处理方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -935,78 +1105,164 @@
   
 
 
-<h1 id="ops">Ops</h1>
-<p>Operations，运维</p>
-<h2 id="devops">DevOps</h2>
-<p><strong>是什么</strong></p>
-<p>DevOps 是一种文化、实践和工具的集合，旨在促进开发团队（Development）和运维团队（Operations）之间的协作与自动化，从而加速软件开发与交付过程。</p>
-<p><strong>核心</strong></p>
-<p>持续集成（CI）和持续交付（CD）是 DevOps 的关键实践之一。</p>
-<p><strong>常见工具</strong></p>
+<h1 id="lab1">Lab1</h1>
+<p>Lab1 实现数据库存储引擎的基本组件。</p>
+<p>关键：位图实现元组管理系统。</p>
+<h2 id="_1">简历</h2>
+<p>实现页式存储。</p>
+<p>实现元组管理系统。</p>
 <ul>
-<li>CI/CD 工具：Jenkins、GitHub Actions、GitLab CI/CD。</li>
-<li>配置管理：Ansible、Puppet、Chef。</li>
-<li>容器化：Docker、Kubernetes。</li>
+<li>通过元组大小，计算页面所能容纳元组数。</li>
+<li>通过元组数，初始化页头与存储元组的数组。</li>
 </ul>
-<p><strong>参考链接</strong></p>
-<p><a href="https://www.bilibili.com/video/BV1r3411F7kn/">技术蛋老师 Github Actions 工作流自动化入门核心</a></p>
-<p><a href="https://docs.github.com/zh/pages">Github Pages 官方文档</a>（里面有用到如何使用 Github Actions 工作流辅助页面发布，可以仔细看看）</p>
-<p><a href="https://docs.github.com/zh">Github 官方文档</a>中有 <code>CI/CD and DevOps</code> 的模块，里面有 <code>Github Actions</code> <code>Github Packages</code>（类似 maven） <code>Github Pages</code>。（虽然面试大概率没什么用，不过还是很实用的技术）</p>
-<h2 id="simple-ops-process">Simple-Ops-Process</h2>
-<p>（简单运维流程）</p>
-<p>从<a href="https://render.com/docs">网站托管云平台 Render 的文档</a>中可以看出一个真正的项目需要哪些完整的运维流程。</p>
-<p>（学习用处不是很大，简化版云服务商，在传统云服务商的基础上又加了一层抽象，只是当前我的<del>菜鸡</del>水平能大致看懂而已，阿里云的官方文档是真复杂。）</p>
-<p><strong>服务分类</strong>：</p>
-<pre class="mermaid"><code>graph TD;
-    A["Will your app receive traffic from the public internet(browsers, mobile apps, etc.)?"] --"Nope."--&gt; B["Will your app receive private network traffic from your other Render services?"];
-    A --"Yes!"--&gt; C["Does your app consist entirely of statically served files (HTML, CSS, JS, etc.)?"];
-    B --"No, any traffic is outgoing."--&gt; D["Will your app run continuously, or periodically on a schedule?"];
-    B --"Yes!"--&gt; E["Create a Private service"];
-    D --"Continuously."--&gt; F["Create a Background worker"];
-    D --"Periodically."--&gt; G["Create a Cron job"];
-    C --"No, my app includes server-side logic."--&gt; H["Create a Web service"];
-    C --"Yes!"--&gt; I["Create a Static site"];</code></pre>
-<table>
-<thead>
-<tr>
-<th>场景</th>
-<th>示例</th>
-<th>服务</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>接收公共互联网流量，完全由静态文件组成</td>
-<td>静态博客、文档网站</td>
-<td>Static site（静态站点）</td>
-</tr>
-<tr>
-<td>接收公共互联网流量，包含服务器端逻辑</td>
-<td>电商网站、动态博客系统</td>
-<td>Web service（Web 服务）</td>
-</tr>
-<tr>
-<td>不接收公共互联网流量，接收来自其他内网的私有网络流量</td>
-<td>微服务、数据处理服务</td>
-<td>Private service（私有服务）</td>
-</tr>
-<tr>
-<td>不接收公共互联网流量，不接收来自其他内网服务的流量</td>
-<td>定时任务、后台数据同步任务</td>
-<td>Cron job（定时任务）</td>
-</tr>
-<tr>
-<td>不接收公共互联网流量，且需要持续运行</td>
-<td>后台任务服务、实时推送服务</td>
-<td>Background worker（后台任务）</td>
-</tr>
-<tr>
-<td>不接收公共互联网流量，且需要按计划运行</td>
-<td>数据库清理、定期报告生成</td>
-<td>Cron job（定时任务）</td>
-</tr>
-</tbody>
-</table>
+<p><a href="###优点">通过位图高效利用磁盘空间。</a></p>
+<h2 id="_2">存储引擎基本组件</h2>
+<h3 id="_3">关系图</h3>
+<p><img alt="数据库-存储引擎-基本组件-关系图" src="../Lab1.assets/%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E-%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6-%E5%85%B3%E7%B3%BB%E5%9B%BE.png" /></p>
+<h3 id="_4">例</h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">student_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><code>students</code> 表相当于 HeapFile。</p>
+<p><code>student_id</code>、<code>name</code>、<code>age</code> 组成的一列数据相当于元组。</p>
+<p><code>student_id</code> 相当于元组中的个字段。</p>
+<h3 id="_5">页式存储</h3>
+<p>页是数据库存储数据的最小单位。</p>
+<p>SimpleDB 中单页大小 4KB。</p>
+<p>一个表可能有多个页，数据存储在页中，以页为单位存储在磁盘中。</p>
+<p>当访问表中数据时，可根据数据的页 ID 定位所在页，并将其从磁盘加载到内存中，性能高。</p>
+<h3 id="_6">组件的文字描述</h3>
+<p><strong>DataBase</strong></p>
+<p>DataBase 相当于整个数据库系统的中心枢纽，管理数据库中的所有组件，协调数据库的各个子系统。</p>
+<ul>
+<li>管理 BufferPool</li>
+<li>管理 Catalog</li>
+<li>事务管理和锁管理，确保数据的一致性和隔离性（未学）</li>
+</ul>
+<p><strong>Catalog</strong></p>
+<p>Catalog 负责管理数据库中的所有表和索引，其维护了每个表的引用。</p>
+<p>执行查询操作时，Catalog 提供表结构（文件引用、表名称、主键）供查询处理器使用。</p>
+<p>将一个表的三个属性封装为内部类，通过一个 Map 维护目录。</p>
+<p><strong>BufferPool</strong></p>
+<p>BufferPool 缓冲池，缓存 Page 至内存中。</p>
+<p><strong>HeapFile</strong></p>
+<p>HeapFile 是对硬盘 HeapFile 操作的抽象，一个 HeapFile 对应一个物理文件。SimpleDB 会将多个 HeapPage 连续写入文件。</p>
+<ul>
+<li>File：实际物理文件</li>
+<li>TupleDesc：该表的 Tuple 元数据</li>
+</ul>
+<p><strong>HeapPage</strong></p>
+<p>数据库的基本存储单元</p>
+<ul>
+<li>
+<p>HeapPageId</p>
+</li>
+<li>
+<p>byte[] header：槽位状态位图，用来表示每个槽位的使用状态，以 bit 为单位。</p>
+</li>
+<li>
+<p>int numSlots：槽位数，也是页面最多所能放元组的个数</p>
+</li>
+<li>
+<p>TupleDesc</p>
+</li>
+<li>
+<p>Tuple[] tuples</p>
+</li>
+</ul>
+<p><strong>HeapPageId</strong></p>
+<ul>
+<li>int tableId：所在表的编号</li>
+<li>int pageNumberOnTable：该页在该表上的索引</li>
+</ul>
+<p><strong>Tuple</strong></p>
+<ul>
+<li>TupleDesc</li>
+<li>RecordId</li>
+<li>ArrayList<Field> fields</li>
+</ul>
+<p><strong>TupleDesc</strong></p>
+<p>TupleDesc 是 Tuple 的元数据，描述了 Tuple 每个 Field 的类型和名称。</p>
+<p><span style=color:blue;>每个表的所有 Page、所有 Tuple 都是相同的。在实际的数据库系统中，HeapFile 的所有 HeapPage 共享同一个 TupleDesc（通过 Catalog 根据 tableid 获取）。但每个 Page 仍然需要持有这个描述符以便独立完成数据的解析和验证（如校验当前页中元组的数目）。</span></p>
+<ul>
+<li>ArrayList<TDItem> tdItems</li>
+<li>TDItem<ul>
+<li>fieldType</li>
+<li>fieldName</li>
+</ul>
+</li>
+</ul>
+<p><strong>RecordId</strong></p>
+<p>RecordId 是元组的唯一标识符</p>
+<ul>
+<li>PageId：所在页面编号</li>
+<li>int tupleNumberOnPage：该元组在该页面上的索引</li>
+</ul>
+<h2 id="_7">位图&amp;元组管理系统</h2>
+<h3 id="_8">页的初始化</h3>
+<p><strong>header 初始化</strong></p>
+<p>根据元组大小，计算页所能容纳的元组数。</p>
+<p>计算公式：<span class="arithmatex">\(页可容纳的元组数 = \frac{页的 bit 数}{元组 bit 数+1} = \frac{4096 \cdot 8}{元组字节数 \cdot 8 + 1}\)</span></p>
+<ul>
+<li>结果向下取整，<code>+1</code> 是元组对应槽位的 bit。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNumTuples</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">floor</span><span class="p">((</span><span class="n">BufferPool</span><span class="p">.</span><span class="na">getPageSize</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8.0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="na">getSize</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>计算 header 数组大小。</p>
+<p>计算公式：<span class="arithmatex">\(\frac{元组数}{8}\)</span>，结果向上取整。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getHeaderSize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">ceil</span><span class="p">(</span><span class="n">getNumTuples</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>元组初始化</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">Tuple</span><span class="o">[]</span><span class="w"> </span><span class="n">tuples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="o">[</span><span class="n">numSlots</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>填充数据</strong></p>
+<p>随后使用 I/O 流，读取传入的字节数据。</p>
+<p>根据槽位与元组大小，截取对应字节数组。</p>
+<p>然后将字节数组反序列化为 Tuple 对象。</p>
+<h3 id="_9">槽位处理方法</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// 检查槽位为 0 还是 1</span>
+<span class="c1">// i 为槽位索引</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isSlotUsed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 字节索引：i / 8</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">byteIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 槽位在该字节中的索引：i % 8</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bitIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 取出 header 中对应的字节</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">headerByte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">header</span><span class="o">[</span><span class="n">byteIndex</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 通过位操作，检查字节中的对应槽位是否为 1</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">((</span><span class="n">headerByte</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">bitIndex</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// 填充对应索引的槽位</span>
+<span class="c1">// i 为槽位索引，value 为 0 或 1</span>
+<span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">markSlotUsed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">byteIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bitIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">header</span><span class="o">[</span><span class="n">byteIndex</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 设置位为1</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitIndex</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 设置位为0</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitIndex</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">header</span><span class="o">[</span><span class="n">byteIndex</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="_10">优点</h3>
+<p><strong>页式存储中位图管理元组实例的优点</strong></p>
+<ul>
+<li>空间换时间：向表中新增元组时，遍历 header 中的位，即可定位到页的空闲空间（类似索引）。</li>
+<li>空间效率：位图将空间利用到了极致。</li>
+<li>删除优化：删除元组只需改变位图对应 bit，无需立即擦除数据。</li>
+</ul>
 
 
 
