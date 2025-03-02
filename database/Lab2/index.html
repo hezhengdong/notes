@@ -1149,19 +1149,27 @@
 
 
 <h1 id="lab2">Lab2</h1>
-<p>理解 Operator 类的设计哲学和火山模型，是理解整个 SimpleDB 执行模型的关键。</p>
-<p>Lab2 实现执行引擎的具体实现，包括对元组的增删查（当然，里面有很多细节），几个操作符的实现。</p>
+<p>Lab2 实验目标：</p>
 <ul>
-<li>实现 DML 基本流程，从操作符到磁盘。</li>
-<li>实现了几个常用操作符（模板方法模式）</li>
-<li>实现基本的存储引擎（火山模型）</li>
+<li>实现数据库存储引擎关键模块（BufferPool/HeapFile/HeapPage）。</li>
+<li>基于存储引擎，实现基本的 DML 操作（增/删/查，从操作符到磁盘）。</li>
+<li>基于火山模型，利用模板方法模式，实现操作符，构建基本的执行引擎。</li>
 </ul>
 <p>参考实现：</p>
-<p><a href="https://thomas-li-sjtu.github.io/2022/06/17/Simple-DB-Lab2/">MIT-6.830 Lab2 总结与备忘 thomas-li-sjtu.github.io</a></p>
-<p>SimpleDB 中主要实现 DML（数据库操作语言）的增删改查，并没有实现 DDL（数据库设计语言）。</p>
-<p><strong>关键</strong>是什么？</p>
-<p>BufferPool 有个缓冲池，还有个 LRU，脏页的处理也算一个。</p>
-<p>HeapPage 对元组的操作算一个，位图也是关键。</p>
+<ul>
+<li><a href="https://thomas-li-sjtu.github.io/2022/06/17/Simple-DB-Lab2/">MIT-6.830 Lab2 总结与备忘 thomas-li-sjtu.github.io</a></li>
+</ul>
+<p>关键：</p>
+<ul>
+<li>BufferPool LRU 页面淘汰策略、脏页管理。</li>
+<li>HeapPage 页式存储结构，通过位图管理页中元组。</li>
+<li>模板方法模式、火山模型。</li>
+</ul>
+<p>其他：</p>
+<ul>
+<li>SimpleDB 中主要实现 DML（数据库操作语言）的增删查，并没有实现 DDL（数据库设计语言）。</li>
+<li>代码框架已经提供了大部分 I/O 操作的具体实现。</li>
+</ul>
 <pre class="mermaid"><code>flowchart TB
     subgraph 存储层
         Disk[(磁盘)] &lt;--&gt; HeapFile
