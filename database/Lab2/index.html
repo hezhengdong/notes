@@ -405,6 +405,8 @@
       
         
       
+        
+      
     
     
       
@@ -678,6 +680,27 @@
   
   <span class="md-ellipsis">
     Lab3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab4
   </span>
   
 
@@ -1255,25 +1278,23 @@
     BP-&gt;&gt;HF: HeapFile.insertTuple(TransactionId, Tuple)
         activate HF
         HF-&gt;&gt;HF: 1. 查找有空槽的页面&lt;br/&gt;2. 若无则创建新页
-        HF-&gt;&gt;HF: 3. 根据缓冲池获取页面（细节省略）
+        HF-&gt;&gt;HF: 3. BufferPool.getPage&lt;br&gt;（细节见"查询元组"）
+        alt 如果页面未满
         HF-&gt;&gt;HP: HeapPage.insertTuple(Tuple)
             activate HP
             HP-&gt;&gt;HP: 1. 线性扫描寻找第一个空闲槽位&lt;br/&gt;2. 插入元组并设置 RecordId
             HP--&gt;&gt;HF: 
             deactivate HP
-            alt HeapFile.writePage
-                HF-&gt;&gt;HF2: HeapFile.writePage
-                activate HF2
-                    HF2-&gt;&gt;HF2: 根据页面大小与页面数计算出&lt;br/&gt;指向 DbFile 末尾的指针偏移量
-                    HF2-&gt;&gt;HP: Page.getPageData
-                    activate HP
-                        HP-&gt;&gt;HP: 函数内部通过一系列操作&lt;br/&gt;将 Page 组装为 byte 数组
-                        HP--&gt;&gt;HF2: return byte[] data
-                    deactivate HP
-                    HF2-&gt;&gt;D: 通过 IO 流，向文件末尾&lt;br/&gt;写入 Page 的二进制数据
-                    HF2-&gt;&gt;HF2: file.close()
-                    HF2--&gt;&gt;HF: 
-                deactivate HF2
+        else 如果页面已满
+            HF-&gt;&gt;HP: new HeapPage()
+            HF-&gt;&gt;HP: HeapPage.insertTuple(Tuple)
+            activate HP
+            HP-&gt;&gt;HP: 1. 线性扫描寻找第一个空闲槽位&lt;br/&gt;2. 插入元组并设置 RecordId
+            HP--&gt;&gt;HF: 
+            deactivate HP
+            HF-&gt;&gt;D: 将页面写入磁盘中，writePage()&lt;br&gt;Lab 4 中碰到的 bug&lt;br&gt;这里是唯一一个需要写入磁盘，而不是借助 BufferPool 交互的地方。&lt;br&gt;因为 HeapFile 记录表中页的数目是通过文件长度计算的，&lt;br&gt;所以创建新页面时，必须将页写入磁盘中，否则会出错。
+
+
             end
         HF--&gt;&gt;BP: 返回被修改的页面 ArrayList&lt;Page&gt;
         deactivate HF
@@ -1336,12 +1357,25 @@ DL-&gt;&gt;BG: BufferPool.getPage
         BG-&gt;&gt;BE: evictPage
             activate BE
             BE-&gt;&gt;BE: 遍历 LRU 缓存&lt;br/&gt;找到最久未使用的页面
-            BE-&gt;&gt;BE: 如果页面不是脏页，则直接移除
-            BE-&gt;&gt;BF: 如果页面是脏页&lt;br/&gt;将页面刷新到磁盘&lt;br/&gt;flushPage(PageId)
+            BE-&gt;&gt;BE: 移除掉最久未使用且不是脏页的页面，&lt;br&gt;脏页要放最后移除
+            BE-&gt;&gt;BF: 如果页面是脏页&lt;br/&gt;将脏页刷新到磁盘&lt;br/&gt;flushPage(PageId)
                 activate BF
-                BF-&gt;&gt;HF: HeapFile.writePage(page)&lt;br&gt;（细节见"删除元组"）
+                alt HeapFile.writePage
+                BF-&gt;&gt;HF: HeapFile.writePage
+                activate HF
+                    HF-&gt;&gt;HF: 根据页面大小与页面数计算出&lt;br/&gt;指向 DbFile 末尾的指针偏移量
+                    HF-&gt;&gt;HP: Page.getPageData
+                    activate HP
+                        HP-&gt;&gt;HP: 函数内部通过一系列操作&lt;br/&gt;将 Page 组装为 byte 数组
+                        HP--&gt;&gt;HF: return byte[] data
+                    deactivate HP
+                    HF-&gt;&gt;D: 通过 IO 流，向文件末尾&lt;br/&gt;写入 Page 的二进制数据
+                    HF-&gt;&gt;HF: file.close()
+                    HF--&gt;&gt;BF: 
+                deactivate HF
+            end
                 BF-&gt;&gt;BF: 保存当前页面状态作为镜像&lt;br/&gt;事务中会用到&lt;br/&gt;Page.setBeforeImage();
-                BF-&gt;&gt;BF: 清除脏页标记
+                BF-&gt;&gt;BF: 将脏页从缓冲池与 LRU 缓存中移除。
                 BF--&gt;&gt;BE: 
                 deactivate BF
             BE--&gt;&gt;BG: 
