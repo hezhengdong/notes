@@ -1369,7 +1369,7 @@
     BTreeInternalPage *-- BTreeEntry</code></pre>
 <h3 id="_2">结构图</h3>
 <p><img alt="SimpleDB中B+Tree的详细结构" src="../Lab5.assets/SimpleDB%E4%B8%ADB%2BTree%E7%9A%84%E8%AF%A6%E7%BB%86%E7%BB%93%E6%9E%84.png" /></p>
-<p>注意父页与子页间的三类指针。</p>
+<p>注意子页与父页间的三类指针。</p>
 <h2 id="findleafpage">findLeafPage</h2>
 <h3 id="_3">递归逻辑</h3>
 <p>终止条件</p>
@@ -1517,6 +1517,11 @@
 <p>B+ 树查询在 SimpleDB 中是怎么用的？</p>
 </blockquote>
 <p>BTreeFileEncoder 中根据用户传入的命令行参数，决定是否使用 B+ 树查询。</p>
+<blockquote>
+<p>进阶</p>
+</blockquote>
+<p><a href="https://15445.courses.cs.cmu.edu/fall2022/notes/08-trees.pdf">cmu15445 f22 lecture08 tree-indexes note</a></p>
+<p>Lab 实现的是最基本的东西，还有很多进阶知识，cmu 的讲义里写的很清晰。</p>
 
 
 
