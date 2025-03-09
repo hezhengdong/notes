@@ -407,6 +407,8 @@
       
         
       
+        
+      
     
     
       
@@ -701,6 +703,27 @@
   
   <span class="md-ellipsis">
     Lab4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab5
   </span>
   
 
@@ -1300,6 +1323,7 @@
         deactivate HF
     BP-&gt;&gt;HP: 将被修改的页面标记为脏页&lt;br/&gt;Page.markDirty(true, tid)
     BP-&gt;&gt;BP: 将脏页放入缓冲池
+    BP-&gt;&gt;BP: 将脏页 ID 放入 LRU 队列
     BP--&gt;&gt;I: 
     deactivate BP</code></pre>
 <h3 id="delete">Delete</h3>
@@ -1326,6 +1350,7 @@
         deactivate HF
     BP-&gt;&gt;HP: 将被修改的页面标记为脏页&lt;br/&gt;Page.markDirty(true, tid)
     BP-&gt;&gt;BP: 将脏页放入缓冲池
+    BP-&gt;&gt;BP: 将脏页 ID 放入 LRU 队列
     BP--&gt;&gt;DF: 
     deactivate BP</code></pre>
 <h3 id="select">Select</h3>
