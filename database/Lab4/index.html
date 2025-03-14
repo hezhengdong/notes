@@ -409,6 +409,8 @@
       
         
       
+        
+      
     
     
       
@@ -658,6 +660,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -676,6 +699,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -765,6 +792,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/ubuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    云服务器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -783,6 +852,8 @@
       
         
           
+        
+      
         
       
         
@@ -840,6 +911,27 @@
   
   <span class="md-ellipsis">
     algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../record/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字设计和计算机体系结构
   </span>
   
 
@@ -1121,29 +1213,6 @@
 <li>回滚：恢复事务执行前的磁盘状态。</li>
 </ul>
 <p>bug：<code>HeapFile.insertTuple</code> 中，当元组已满，新增页面时，需要将新增的页面立即写入磁盘，因为表页面数的计算基于磁盘文件的长度。SimpleDB 增删查中，目前唯一一处不经过 BufferPool，需要直接操作磁盘的逻辑。</p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant ? as XXX
-    participant B1 as BufferPool
-    participant B2 as BufferPool
-    participant LM as LockManager
-
-?-&gt;&gt;B1: getPage
-activate B1
-B1-&gt;&gt;LM: setLock&lt;br&gt;获取锁（页级锁）
-B1-&gt;&gt;B1: 获取页（细节省略）
-deactivate B1
-
-?-&gt;&gt;B1: transactionComplete
-activate B1
-alt 提交事务
-B1-&gt;&gt;B2: flushPages
-B2-&gt;&gt;B2: 将事务中涉及的脏页刷新到磁盘上
-else 回滚事务
-B1-&gt;&gt;B2: restorePages
-B2-&gt;&gt;B2: Page.getBeforeImage&lt;br&gt;将页面数据恢复到修改前的状态
-end
-B1-&gt;&gt;LM: releaseLocks&lt;br&gt;释放锁
-deactivate B1</code></pre>
 <h2 id="_5">处理死锁</h2>
 <ul>
 <li>超时等待</li>
