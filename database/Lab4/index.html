@@ -615,14 +615,38 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      处理死锁
+      死锁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="死锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      等待图检测死锁
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       其他
     </span>
@@ -1126,14 +1150,38 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      处理死锁
+      死锁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="死锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      介绍
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      等待图检测死锁
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       其他
     </span>
@@ -1161,7 +1209,7 @@
 
 <h1 id="lab4">Lab4</h1>
 <p>Lab4 通过两阶段锁（2PL）实现串行化隔离级别。</p>
-<p>参考：</p>
+<p>参考链接</p>
 <p><a href="https://thomas-li-sjtu.github.io/2022/06/20/Simple-DB-Lab4/">MIT-6.830 Lab4 总结与备忘 thomas-li-sjtu.github.io</a></p>
 <p><a href="https://15445.courses.cs.cmu.edu/fall2022/slides/16-twophaselocking.pdf">cmu15445 f22 lecture16 two-phase-locking slide</a></p>
 <p><a href="https://15445.courses.cs.cmu.edu/fall2022/notes/16-twophaselocking.pdf">cmu15445 f22 lecture16 two-phase-locking note</a></p>
@@ -1199,7 +1247,7 @@
 <blockquote>
 <p>Lab 里，LockManager 相当于事务并发的调度站，因此需要确保自身变量与方法的线程安全。后续代码逻辑的线程安全基于 LockManager 来保证。</p>
 </blockquote>
-<p><img alt="image-20250304203648202" src="../Lab4.assets/image-20250304203648202.png" /></p>
+<p><img alt="两阶段锁" src="../Lab4.assets/%E4%B8%A4%E9%98%B6%E6%AE%B5%E9%94%81.png" /></p>
 <h3 id="_4">实现</h3>
 <p>SimpleDB 中实现的是页级锁。事务在 <code>BufferPool.getPage</code> 中获取锁。</p>
 <p>基于 Lab2 的实现，表的增删查都要经过 <code>BufferPool.getPage</code>，因此只需在该方法中设置 <code>setLock</code> 即可。执行增删查时传入参数，指定锁的类型。</p>
@@ -1213,13 +1261,39 @@
 <li>回滚：恢复事务执行前的磁盘状态。</li>
 </ul>
 <p>bug：<code>HeapFile.insertTuple</code> 中，当元组已满，新增页面时，需要将新增的页面立即写入磁盘，因为表页面数的计算基于磁盘文件的长度。SimpleDB 增删查中，目前唯一一处不经过 BufferPool，需要直接操作磁盘的逻辑。</p>
-<h2 id="_5">处理死锁</h2>
+<h2 id="_5">死锁</h2>
+<h3 id="_6">介绍</h3>
+<p><a href="https://javaguide.cn/cs-basics/operating-system/operating-system-basic-questions-01.html#%E6%AD%BB%E9%94%81">死锁 javaguide.cn</a></p>
+<p>死锁的四个必要条件：互斥、占有并等待、非抢占、循环等待。</p>
+<p>满足四个必要条件，并不一定会发生死锁。</p>
+<p><img alt="死锁与四个必要条件的关系" src="../Lab4.assets/%E6%AD%BB%E9%94%81%E4%B8%8E%E5%9B%9B%E4%B8%AA%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6%E7%9A%84%E5%85%B3%E7%B3%BB.png" /></p>
+<p>解决死锁的方法：</p>
 <ul>
-<li>超时等待</li>
-<li>环形检测图</li>
+<li>预防：破坏四个必要条件之一。</li>
+<li>避免：即使满足四个必要条件，做出合理选择，就可以避免死锁。<ul>
 <li>银行家算法</li>
 </ul>
-<h2 id="_6">其他</h2>
+</li>
+<li>检测：<ul>
+<li>超时等待</li>
+<li>等待图检测死锁</li>
+</ul>
+</li>
+<li>解除</li>
+</ul>
+<h3 id="_7">等待图检测死锁</h3>
+<p>是一个标准算法的实现。</p>
+<p>类似的题：<a href="https://leetcode.cn/problems/course-schedule/">leetcode 207. 课程表</a>。拓扑排序，BFS 检测有向图是否带环。</p>
+<p>在 LockManager 中，成员变量：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 哪些事务正持有页上的锁</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">PageId</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Lock</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">lockMap</span><span class="p">;</span>
+<span class="c1">// 哪些事务在等待页上的锁释放</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">PageId</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">TransactionId</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">waitingMap</span><span class="p">;</span>
+</code></pre></div>
+<p>根据这两个成员变量，能够构建出事务间的等待图。</p>
+<p>随后就是算法的标准实现，通过 BFS 判断是否有环。</p>
+<p>如果有环，则说明有事务在相互等待，出现死锁，回滚事务。</p>
+<h2 id="_8">其他</h2>
 <p>有相当多可以拓展的地方。</p>
 <ul>
 <li>例如隔离级别的实现。两阶段锁实现串行化是最简单的方法。MVCC 实现可重复读才是重点，InnoDB 的默认隔离级别。</li>

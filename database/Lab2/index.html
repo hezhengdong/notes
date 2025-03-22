@@ -663,6 +663,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-lru-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      优化-LRU-K
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1291,6 +1300,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-lru-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      优化-LRU-K
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1316,10 +1334,10 @@
 <li>基于存储引擎，实现基本的 DML 操作（增/删/查，从操作符到磁盘）。</li>
 <li>基于火山模型，利用模板方法模式，实现操作符，构建基本的执行引擎。</li>
 </ul>
-<p>参考实现：</p>
-<ul>
-<li><a href="https://thomas-li-sjtu.github.io/2022/06/17/Simple-DB-Lab2/">MIT-6.830 Lab2 总结与备忘 thomas-li-sjtu.github.io</a></li>
-</ul>
+<p>参考链接</p>
+<p><a href="https://thomas-li-sjtu.github.io/2022/06/17/Simple-DB-Lab2/">MIT-6.830 Lab2 总结与备忘 thomas-li-sjtu.github.io</a></p>
+<p><a href="https://github.com/lidaohang/ceph_study/blob/master/LRU-K%E5%92%8C2Q%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D.md">LRU-K和2Q缓存算法介绍</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/591436083">经典论文解读——Cache 替换算法</a>（讲了各种缓冲替换算法，拓展眼界。）</p>
 <p>关键：</p>
 <ul>
 <li>BufferPool LRU 页面淘汰策略、脏页管理。</li>
@@ -1802,6 +1820,41 @@ M-&gt;&gt;J: Join.close</code></pre>
 <span class="p">}</span>
 </code></pre></div>
 <p>半天没检索出来是因为自己忽视了 ant 的报错。命令行上运行 java 程序，需要先使用 ant/maven 等编译工具，将 java 代码编译为可执行文件。IDEA 用多后，自己忽视了最基本的东西。</p>
+<h2 id="-lru-k">优化-LRU-K</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// 缓冲池</span>
+<span class="n">ConcurrentHashMap</span><span class="o">&lt;</span><span class="n">PageId</span><span class="p">,</span><span class="w"> </span><span class="n">Page</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pageStore</span><span class="p">;</span>
+<span class="c1">// 主队列，存储访问次数已达 K 次的页</span>
+<span class="n">LinkedHashMap</span><span class="o">&lt;</span><span class="n">PageId</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lruQueue</span><span class="p">;</span>
+<span class="c1">// 辅助队列，存储访问次数未达 K 次的页</span>
+<span class="n">LinkedHashMap</span><span class="o">&lt;</span><span class="n">PageId</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="o">&gt;</span><span class="w"> </span><span class="n">historyQueue</span><span class="p">;</span>
+<span class="c1">// 记录每个页的访问历史</span>
+<span class="n">ConcurrentHashMap</span><span class="o">&lt;</span><span class="n">PageId</span><span class="p">,</span><span class="w"> </span><span class="n">PageMetadata</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accessHistory</span><span class="p">;</span>
+<span class="c1">// 访问 K 次后，页从辅助队列移至主队列</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="c1">// 元数据</span>
+<span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PageMetadata</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">accessCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// 访问次数</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">lastAccessTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 最后一次访问时间（用于历史队列排序）</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">kthAccessTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 第K次访问时间（用于主队列排序）</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>访问页面时，添加/更新缓存：</p>
+<ul>
+<li>访问次数小于 K 时，递增 <code>PageMetadata.accessCount</code>，将页 ID 存入 <code>historyQueue</code> 中。</li>
+<li>访问次数大于等于 K 时，将页 ID 由 <code>historyQueue</code> 转移到 <code>lruQueue</code> 中。</li>
+</ul>
+<p>当缓冲池满时，淘汰缓存：</p>
+<ul>
+<li>优先从 <code>historyQueue</code> 中淘汰。</li>
+<li>当 <code>historyQueue</code> 为空时，再从 <code>lruQueue</code> 中淘汰。</li>
+</ul>
+<p>K 的最佳实践为 2。</p>
+<blockquote>
+<p>实话说，<code>lastAccessTime</code> <code>kthAccessTime</code> 并没有起到任何作用，两个 LRU 队列已经实现了根据访问时间的早晚淘汰数据。</p>
+<p><code>PageMetadata</code> 中，只有 <code>accessCount</code> 真正发挥了作用。</p>
+<p>但是 LRU-K 的标准实现需要维护时间戳。</p>
+<p>论文看不懂，AI 说不清楚，烦人。</p>
+</blockquote>
 
 
 

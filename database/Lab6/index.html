@@ -1348,7 +1348,7 @@
 <h1 id="lab6">Lab6</h1>
 <p>Lab6 实现 ARIES 的 WAL 与三阶段恢复过程。</p>
 <p>实验提供的代码，已经定义了日志文件格式，实现了大部分 I/O 操作。</p>
-<p>参考资料</p>
+<p>参考链接</p>
 <p><a href="https://thomas-li-sjtu.github.io/2022/06/24/Simple-DB-Lab6/">MIT-6.830 Lab6 总结与备忘 thomas-li-sjtu.github.io</a></p>
 <p><a href="https://15445.courses.cs.cmu.edu/fall2022/notes/19-logging.pdf">cmu15445 f22 lecture19 Logging Schemes note</a></p>
 <p><a href="https://15445.courses.cs.cmu.edu/fall2022/notes/20-recovery.pdf">cmu15445 f22 lecture21 Database Crash Recovery note</a></p>
@@ -1390,7 +1390,7 @@
 </li>
 <li>逻辑 Undo：从操作层面逆向执行原有事物的变更。例如事务执行是 Insert，回滚就将 Insert 逆向为 Delete 执行。<ul>
 <li>优点：恢复粒度细，适合索引等复杂场景。</li>
-<li>去欸但：实现复杂。</li>
+<li>缺点：实现复杂。</li>
 </ul>
 </li>
 </ul>
