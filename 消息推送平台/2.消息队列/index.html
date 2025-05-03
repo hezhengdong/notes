@@ -12,26 +12,28 @@
         <meta name="author" content="hezhengdong">
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/">
+        <link rel="canonical" href="https://mydomain.org/mysite/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/2.%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
       
       
+        <link rel="prev" href="../1.%E6%8E%A5%E5%85%A5%E5%B1%82/">
       
-        <link rel="next" href="database/">
+      
+        <link rel="next" href="../3.%E6%B6%88%E8%B4%B9%E5%B1%82/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Notes</title>
+        <title>消息队列 - Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,11 +54,11 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-hzds-notes" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to hzd's notes!
+              消息队列
             
           </span>
         </div>
@@ -225,11 +227,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -250,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="database/" class="md-tabs__link">
+        <a href="../../database/" class="md-tabs__link">
           
   
   
@@ -272,7 +272,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="misc/" class="md-tabs__link">
+        <a href="../../misc/" class="md-tabs__link">
           
   
   
@@ -294,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="record/" class="md-tabs__link">
+        <a href="../../record/" class="md-tabs__link">
           
   
   
@@ -316,7 +316,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="tools/" class="md-tabs__link">
+        <a href="../../tools/" class="md-tabs__link">
           
   
   
@@ -334,11 +334,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -374,7 +376,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -401,19 +403,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -424,7 +417,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -469,7 +461,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="database/" class="md-nav__link ">
+            <a href="../../database/" class="md-nav__link ">
               
   
   
@@ -504,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="database/Lab1/" class="md-nav__link">
+      <a href="../../database/Lab1/" class="md-nav__link">
         
   
   
@@ -527,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="database/Lab2/" class="md-nav__link">
+      <a href="../../database/Lab2/" class="md-nav__link">
         
   
   
@@ -550,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="database/Lab3/" class="md-nav__link">
+      <a href="../../database/Lab3/" class="md-nav__link">
         
   
   
@@ -573,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="database/Lab4/" class="md-nav__link">
+      <a href="../../database/Lab4/" class="md-nav__link">
         
   
   
@@ -596,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="database/Lab5/" class="md-nav__link">
+      <a href="../../database/Lab5/" class="md-nav__link">
         
   
   
@@ -619,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="database/Lab6/" class="md-nav__link">
+      <a href="../../database/Lab6/" class="md-nav__link">
         
   
   
@@ -680,7 +672,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="misc/" class="md-nav__link ">
+            <a href="../../misc/" class="md-nav__link ">
               
   
   
@@ -715,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="misc/MkDocs-Material/" class="md-nav__link">
+      <a href="../../misc/MkDocs-Material/" class="md-nav__link">
         
   
   
@@ -738,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="misc/md-test-doc/" class="md-nav__link">
+      <a href="../../misc/md-test-doc/" class="md-nav__link">
         
   
   
@@ -761,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="misc/ubuntu/" class="md-nav__link">
+      <a href="../../misc/ubuntu/" class="md-nav__link">
         
   
   
@@ -784,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="misc/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
+      <a href="../../misc/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
         
   
   
@@ -807,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="misc/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-LRU-K/" class="md-nav__link">
+      <a href="../../misc/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-LRU-K/" class="md-nav__link">
         
   
   
@@ -862,7 +854,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="record/" class="md-nav__link ">
+            <a href="../../record/" class="md-nav__link ">
               
   
   
@@ -897,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="record/Algorithm/" class="md-nav__link">
+      <a href="../../record/Algorithm/" class="md-nav__link">
         
   
   
@@ -920,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="record/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      <a href="../../record/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="md-nav__link">
         
   
   
@@ -975,7 +967,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="tools/" class="md-nav__link ">
+            <a href="../../tools/" class="md-nav__link ">
               
   
   
@@ -1010,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/Git/" class="md-nav__link">
+      <a href="../../tools/Git/" class="md-nav__link">
         
   
   
@@ -1033,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools/Ops/" class="md-nav__link">
+      <a href="../../tools/Ops/" class="md-nav__link">
         
   
   
@@ -1060,6 +1052,8 @@
       
   
   
+    
+  
   
   
     
@@ -1083,18 +1077,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1107,13 +1104,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             消息推送平台
@@ -1129,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/1.%E6%8E%A5%E5%85%A5%E5%B1%82/" class="md-nav__link">
+      <a href="../1.%E6%8E%A5%E5%85%A5%E5%B1%82/" class="md-nav__link">
         
   
   
@@ -1149,10 +1146,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/2.%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    消息队列
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1163,6 +1182,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据隔离设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      初始化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行任务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      线程池
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      时序图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1175,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/3.%E6%B6%88%E8%B4%B9%E5%B1%82/" class="md-nav__link">
+      <a href="../3.%E6%B6%88%E8%B4%B9%E5%B1%82/" class="md-nav__link">
         
   
   
@@ -1198,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/4.%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="md-nav__link">
+      <a href="../4.%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="md-nav__link">
         
   
   
@@ -1221,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/5.%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA/" class="md-nav__link">
+      <a href="../5.%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA/" class="md-nav__link">
         
   
   
@@ -1264,6 +1357,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据隔离设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      初始化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行任务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      线程池
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      时序图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1281,9 +1436,93 @@
   
 
 
-<h1 id="welcome-to-hzds-notes">Welcome to hzd's notes!</h1>
-<p>The site records the knowledge I have learned.</p>
-<p><img alt="" src="https://api.kdcc.cn/" /></p>
+<h1 id="_1">消息队列</h1>
+<h2 id="_2">数据隔离设计</h2>
+<p>如果数据不隔离，会发生什么？</p>
+<ul>
+<li>当某个发送渠道接口异常时，所有消息都会被阻塞。</li>
+</ul>
+<p>如何设计？</p>
+<ul>
+<li>依据不同渠道、不同消息类型，设置不同的消费者组。</li>
+</ul>
+<p>为什么设置不同消费者组，就能实现数据隔离？</p>
+<ul>
+<li>每个消费者组会维护自己的消费偏移量（offset），一个组的消费进度不会影响另一个组。</li>
+</ul>
+<p>疑惑：为什么共享 Topic 不会发生阻塞？</p>
+<ul>
+<li>Topic 本质是用来保存数据的，如果一个消费者组发生阻塞，只会导致 Topic 中该消费者组相关的消息堆积，其他消费者组仍能正常消费消息。</li>
+<li>其实不是很理解 Topic 的内部原理，继续深入思考，还是有很多不理解的地方。比如为什么在有些消息堆积的情况下，其他消费者组仍能正常消费消息。</li>
+</ul>
+<h2 id="_3">初始化</h2>
+<ol>
+<li>初始化足够数量的 Receiver 实例。</li>
+<li>通过一个方法为每个 Receiver 对象中的 @KafkaListener 注解动态配置 GroupId。（<strong>AOP 思想</strong>）</li>
+<li>为每个 GroupId 获取线程池。（GroupId 充当线程池名称，便于消费任务时指定线程池。）</li>
+</ol>
+<p>GroupId 设计：<code>ChannelType</code> + <code>MessageType</code></p>
+<ul>
+<li><code>ChannelType</code> 渠道类型枚举类。</li>
+<li><code>MessageType</code> 消息类型枚举类。</li>
+</ul>
+<p>如何获取 <code>TaskInfo</code> 的 <code>GroupId</code>？</p>
+<ul>
+<li><code>GroupIdMappingUtils.getGroupIdByTaskInfo</code> 根据 <code>TaskInfo</code> 获取当前任务的两个类型，将二者组合，即为 GroupId。</li>
+</ul>
+<h2 id="_4">执行任务</h2>
+<p>Kafka 单 Topic 多 Group，发布-订阅模型，每个 Group 都会接收到全量消息。</p>
+<p><code>Receiver.consumer</code> 为 Kafka 监听器，获取消息内容，解析消息的 GroupId，只消费与自己 GroupId 相同的消息，其余消息被过滤。（简单粗暴的方式。）</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@KafkaListener</span><span class="p">(</span><span class="n">topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#{&#39;${austin.business.topic.name}&#39;}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">containerFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;filterContainerFactory&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">consumer</span><span class="p">(</span><span class="n">ConsumerRecord</span><span class="o">&lt;?</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">consumerRecord</span><span class="p">,</span><span class="w"> </span><span class="nd">@Header</span><span class="p">(</span><span class="n">KafkaHeaders</span><span class="p">.</span><span class="na">GROUP_ID</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">topicGroupId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 获取消息内容</span>
+<span class="w">    </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">kafkaMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">ofNullable</span><span class="p">(</span><span class="n">consumerRecord</span><span class="p">.</span><span class="na">value</span><span class="p">());</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">kafkaMessage</span><span class="p">.</span><span class="na">isPresent</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">TaskInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">taskInfoLists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="p">.</span><span class="na">parseArray</span><span class="p">(</span><span class="n">kafkaMessage</span><span class="p">.</span><span class="na">get</span><span class="p">(),</span><span class="w"> </span><span class="n">TaskInfo</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// 解析消息的 GroupId</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">messageGroupId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GroupIdMappingUtils</span><span class="p">.</span><span class="na">getGroupIdByTaskInfo</span><span class="p">(</span><span class="n">CollUtil</span><span class="p">.</span><span class="na">getFirst</span><span class="p">(</span><span class="n">taskInfoLists</span><span class="p">.</span><span class="na">iterator</span><span class="p">()));</span>
+<span class="w">        </span><span class="c1">// 只消费与自己 GroupId 相同的消息，其余消息被过滤</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">topicGroupId</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">messageGroupId</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">consumeService</span><span class="p">.</span><span class="na">consume2Send</span><span class="p">(</span><span class="n">taskInfoLists</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>随后 <code>consumeService.consume2Send</code> 中，打印日志，创建任务实例，将每个任务路由到相应的线程池进行处理。</p>
+<p>为什么 Task 是多例？</p>
+<ul>
+<li>Task 中有一个成员变量 TaskInfo。如果 Task 为单例，会导致严重的并发问题。例如线程 A 执行一半线程 B 进来了，导致线程 A 的 taskInfo 被覆盖。</li>
+<li>（难道前面都没有并发问题吗？要避免并发问题，需要保证各个类都是无状态的，即无成员变量。）</li>
+</ul>
+<h2 id="_5">线程池</h2>
+<p><a href="https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html">Java线程池实现原理及其在美团业务中的实践</a></p>
+<p><code>HandlerThreadPoolConfig</code></p>
+<h2 id="_6">时序图</h2>
+<pre class="mermaid"><code>sequenceDiagram
+    participant RS as ReceiverStart
+    participant K as Kafka
+    participant R as Receiver
+    participant CS as ConsumeService
+    participant TPH as TaskPendingHolder
+    participant TP as 线程池&lt;br&gt;然后才是真正执行消息
+
+alt 初始化
+    RS-&gt;&gt;RS: init&lt;br&gt;1. 初始化足够数量的Receiver
+    RS-&gt;&gt;RS: getIdEnhancer&lt;br&gt;2. 为每个Receiver中的Kafka&lt;br&gt;注解动态配置groupId
+    TPH-&gt;&gt;TPH: init&lt;br&gt;3. 为每个groupId获取线程池，并注册
+end
+alt 消费层执行任务
+    K-&gt;&gt;R: consumer
+    R-&gt;&gt;CS: consume2Send
+    CS-&gt;&gt;TPH: route
+    TPH-&gt;&gt;TP: execute&lt;br&gt;线程池执行Task
+end</code></pre>
+<h2 id="_7">问题</h2>
+<p>单 Topic 多 Group 不符合 Kafka 的最佳实践。每个消费者组都会接收全量消息，过滤大量消息，导致资源浪费。</p>
+<p>正确做法：业务应当基于 Topic 隔离，多 Topic 多 Group。</p>
+<blockquote>
+<p>怎么写？懒得重构代码了。就这样吧，手动过滤，虽然代码很烂，但是能跑，且不用后续思考。</p>
+</blockquote>
 
 
 
@@ -1338,12 +1577,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
