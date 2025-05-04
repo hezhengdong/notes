@@ -12,28 +12,28 @@
         <meta name="author" content="hezhengdong">
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/">
+        <link rel="canonical" href="https://mydomain.org/mysite/spring/%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/">
       
       
-        <link rel="prev" href="../tools/Ops/">
+        <link rel="prev" href="../IoC/">
       
       
-        <link rel="next" href="1.%E6%8E%A5%E5%85%A5%E5%B1%82/">
+        <link rel="next" href="../../tools/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>消息推送平台 - Notes</title>
+        <title>循环依赖 - Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,11 +54,11 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreen.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,11 +83,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +93,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -118,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              消息推送平台
+              循环依赖
             
           </span>
         </div>
@@ -229,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -250,7 +245,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../database/" class="md-tabs__link">
+        <a href="../../database/" class="md-tabs__link">
           
   
   
@@ -272,7 +267,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../misc/" class="md-tabs__link">
+        <a href="../../misc/" class="md-tabs__link">
           
   
   
@@ -294,7 +289,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../record/" class="md-tabs__link">
+        <a href="../../record/" class="md-tabs__link">
           
   
   
@@ -312,11 +307,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../spring/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -338,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../tools/" class="md-tabs__link">
+        <a href="../../tools/" class="md-tabs__link">
           
   
   
@@ -356,13 +353,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/" class="md-tabs__link">
           
   
   
@@ -398,7 +393,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -428,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -483,7 +478,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../database/" class="md-nav__link ">
+            <a href="../../database/" class="md-nav__link ">
               
   
   
@@ -518,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/Lab1/" class="md-nav__link">
+      <a href="../../database/Lab1/" class="md-nav__link">
         
   
   
@@ -541,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/Lab2/" class="md-nav__link">
+      <a href="../../database/Lab2/" class="md-nav__link">
         
   
   
@@ -564,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/Lab3/" class="md-nav__link">
+      <a href="../../database/Lab3/" class="md-nav__link">
         
   
   
@@ -587,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/Lab4/" class="md-nav__link">
+      <a href="../../database/Lab4/" class="md-nav__link">
         
   
   
@@ -610,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/Lab5/" class="md-nav__link">
+      <a href="../../database/Lab5/" class="md-nav__link">
         
   
   
@@ -633,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database/Lab6/" class="md-nav__link">
+      <a href="../../database/Lab6/" class="md-nav__link">
         
   
   
@@ -694,7 +689,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../misc/" class="md-nav__link ">
+            <a href="../../misc/" class="md-nav__link ">
               
   
   
@@ -729,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/MkDocs-Material/" class="md-nav__link">
+      <a href="../../misc/MkDocs-Material/" class="md-nav__link">
         
   
   
@@ -752,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/md-test-doc/" class="md-nav__link">
+      <a href="../../misc/md-test-doc/" class="md-nav__link">
         
   
   
@@ -775,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/ubuntu/" class="md-nav__link">
+      <a href="../../misc/ubuntu/" class="md-nav__link">
         
   
   
@@ -798,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
+      <a href="../../misc/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
         
   
   
@@ -821,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-LRU-K/" class="md-nav__link">
+      <a href="../../misc/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-LRU-K/" class="md-nav__link">
         
   
   
@@ -876,7 +871,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../record/" class="md-nav__link ">
+            <a href="../../record/" class="md-nav__link ">
               
   
   
@@ -911,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../record/Algorithm/" class="md-nav__link">
+      <a href="../../record/Algorithm/" class="md-nav__link">
         
   
   
@@ -934,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../record/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      <a href="../../record/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="md-nav__link">
         
   
   
@@ -961,6 +956,8 @@
       
   
   
+    
+  
   
   
     
@@ -980,18 +977,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../spring/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1004,13 +1004,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Spring
@@ -1026,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spring/AOP/" class="md-nav__link">
+      <a href="../AOP/" class="md-nav__link">
         
   
   
@@ -1049,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spring/IoC/" class="md-nav__link">
+      <a href="../IoC/" class="md-nav__link">
         
   
   
@@ -1069,10 +1069,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../spring/%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1083,6 +1090,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1127,7 +1135,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tools/" class="md-nav__link ">
+            <a href="../../tools/" class="md-nav__link ">
               
   
   
@@ -1162,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/Git/" class="md-nav__link">
+      <a href="../../tools/Git/" class="md-nav__link">
         
   
   
@@ -1185,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/Ops/" class="md-nav__link">
+      <a href="../../tools/Ops/" class="md-nav__link">
         
   
   
@@ -1212,8 +1220,6 @@
       
   
   
-    
-  
   
   
     
@@ -1237,21 +1243,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/" class="md-nav__link ">
               
   
   
@@ -1264,13 +1267,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_7" id="__nav_7_label" tabindex="">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             消息推送平台
@@ -1286,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="1.%E6%8E%A5%E5%85%A5%E5%B1%82/" class="md-nav__link">
+      <a href="../../%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/1.%E6%8E%A5%E5%85%A5%E5%B1%82/" class="md-nav__link">
         
   
   
@@ -1309,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2.%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="md-nav__link">
+      <a href="../../%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/2.%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="md-nav__link">
         
   
   
@@ -1332,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="3.%E6%B6%88%E8%B4%B9%E5%B1%82/" class="md-nav__link">
+      <a href="../../%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/3.%E6%B6%88%E8%B4%B9%E5%B1%82/" class="md-nav__link">
         
   
   
@@ -1355,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="4.%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="md-nav__link">
+      <a href="../../%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/4.%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="md-nav__link">
         
   
   
@@ -1378,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="5.%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA/" class="md-nav__link">
+      <a href="../../%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E5%B9%B3%E5%8F%B0/5.%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA/" class="md-nav__link">
         
   
   
@@ -1418,8 +1421,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -1438,18 +1439,9 @@
   
 
 
-<h1 id="_1">消息推送平台</h1>
-<p>统一接口，发送各种渠道消息，经过多层关卡处理，且对消息生命周期全链路追踪。</p>
-<p>项目链接：https://github.com/ZhongFuCheng3y/austin</p>
-<p>技术栈：SpringBoot + Apollo + MySQL + Redis + Kafka + XXL-JOB + Flink</p>
-<p>各个模块：</p>
-<ul>
-<li>接入层：基于责任链模式，对消息进行前置检查、参数拼装、后置检查，发送消息至消息队列。</li>
-<li>消息队列：不同渠道、不同类型消息间相互隔离，基于动态线程池对各消息者组的消费能力进行动态配置。</li>
-<li>消费层：基于责任链模式，对消息进行夜间屏蔽、消息去重、敏感词过滤、限流。</li>
-<li>定时任务：集成 XXL-JOB，通过三个线程池对定时任务的批量执行进行调控。</li>
-<li>链路追踪：在关键处理阶段进行埋点，将埋点信息收集至 Kafka，Flink 清洗处理，数据写入 Redis，方面后续定位问题。</li>
-</ul>
+  <h1>循环依赖</h1>
+
+
 
 
 
@@ -1504,12 +1496,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
