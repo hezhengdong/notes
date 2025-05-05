@@ -655,6 +655,8 @@
       
         
       
+        
+      
     
     
     
@@ -770,6 +772,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MVC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MVC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -867,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      <a href="../repo/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="md-nav__link">
         
   
   
@@ -1336,6 +1361,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#spring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单讲解Spring
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1354,69 +1396,70 @@
 
 
 <h1 id="spring">Spring</h1>
+<p>实现简易版的 Spring，了解其原理，从而更好的使用它。</p>
+<p>参考项目：</p>
+<ul>
+<li>
 <p>mini-spring</p>
+<ul>
+<li>
+<p>手写 IoC、AOP 模块。</p>
+</li>
+<li>
 <p>项目地址：<a href="https://github.com/DerekYRC/mini-spring">https://github.com/DerekYRC/mini-spring</a></p>
-<p>章节描述</p>
+</li>
+</ul>
+</li>
+<li>
+<p>SmartMvc</p>
 <ul>
-<li>IoC 容器的基本实现</li>
-<li>Bean 生命周期与属性填充</li>
-<li>Bean 生命周期回调与扩展点</li>
-<li>XML 配置文件解析</li>
-<li>应用上下文与事件机制</li>
-<li>AOP 实现</li>
-<li>注解解析</li>
-<li>循环依赖</li>
+<li>
+<p>手写 MVC 模块。</p>
+</li>
+<li>
+<p>项目地址：<a href="https://github.com/silently9527/SmartMvc">https://github.com/silently9527/SmartMvc</a></p>
+</li>
 </ul>
-<p>简历描述：</p>
+</li>
+</ul>
+<h2 id="spring_1">简单讲解Spring</h2>
+<blockquote>
+<p>参考链接</p>
+<p><a href="https://javaguide.cn/system-design/framework/spring/spring-knowledge-and-questions-summary.html">Spring常见面试题总结 JavaGuide</a>（提取了些自己认为的重点）</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/4.0.x/spring-framework-reference/html/overview.html">Spring框架简介</a>（两张图的来源）</p>
+</blockquote>
+<p><strong>概念解释</strong></p>
+<p>Spring 的核心在于 IoC、AOP、MVC。</p>
 <ul>
-<li>实现 Bean 生命周期管理机制，设计</li>
+<li>IoC：Spring 以“依赖注入”的方式实现了“控制反转”的效果，以符合软件工程中的“依赖倒置”原则。</li>
+<li>AOP：面向切面编程，通过动态代理将横切逻辑（如日志）与业务代码解耦，实现统一管控。</li>
+<li>MVC：模型-视图-控制器架构模式。<ul>
+<li>Model：系统涉及的数据。<ul>
+<li>普通 Bean。</li>
+<li>Dao：与数据库表映射的 Java Bean。</li>
 </ul>
-<hr />
-<p>mini-spring 干了什么？</p>
-<p>IoC</p>
+</li>
+<li>View：前端页面展示。（前后端分离开发模式下无需考虑。）</li>
+<li>Controller：控制数据的传输。<ul>
+<li>前端接口 &lt;-&gt; 业务逻辑 &lt;-&gt; 数据库。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Spring 框架概述（4.0.x 版本）</strong></p>
+<p><img alt="spring-framework概述" src="index.assets/spring-framework%E6%A6%82%E8%BF%B0.png" /></p>
+<p>Core Container 是 Spring 框架的基础模块，主要提供 IoC 依赖注入功能的支持。</p>
 <ul>
-<li>最初当然是一个最简单的 Bean 容器 Map，即最简单的 BeanFactory</li>
-<li>随后是 <code>BeanDefinition</code>，用于定义 Bean 信息的类，填充 Bean 的属性<ul>
-<li>Bean 的作用域</li>
-<li>Bean 的所有属性（name 与 value）</li>
-<li>初始化方法的名字，销毁方法的名字</li>
-<li>Class 对象</li>
-<li><strong>DefaultListableBeanFactory</strong> 里面就是个最初的 Map，存储 Bean name 与 BeanDefinition。<ul>
-<li>当然，除此之外还有很多拓展功能。等学到再说。</li>
+<li>Spring 的其他功能都需要依赖于该模块。</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>随后是实例化策略，只支持无参构造实例化。就是最简单的反射 newInstance，没什么好说的。</li>
-<li>注入基本属性、注入Bean<ul>
-<li><code>AbstractAutowireCapableBeanFactory.applyPropertyValues</code> 填充属性方法，BeanReference 相当于一个接口，如果属性为此类型，则继续 getBean。最后通过反射为 Object bean 注入属性。</li>
-<li>该方法位于 doCreateBean 方法中。</li>
-</ul>
-</li>
-<li>资源和资源加载器<ul>
-<li>Spring 提供的解析资源的方法，个人觉得其相当于工具类。</li>
-<li>Spring中也就两个地方用到了它，xml解析和占位符解析。</li>
-</ul>
-</li>
-<li>XML 文件中定义 Bean<ul>
-<li>个人认为从重要性的角度来讲，这个玩意不怎么重要，忘记也没什么关系。</li>
-<li>dom4j 解析并向 BeanDefinition 注册属性。</li>
-<li>当然，时序图还是很重要的，有些回忆了，这里在 refresh 方法中调用，BeanFactory 是不会调用它的。</li>
-</ul>
-</li>
-<li>然后就是两个后处理器！<ul>
-<li>Bean 工厂处理器：修改的是 BeanDefinition。<ul>
-<li>占位符解析</li>
-</ul>
-</li>
-<li>Bean 处理器：前置处理与后置处理，修改的是 Bean 实例。<ul>
-<li>注解扫描</li>
-<li>AOP</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>AOP 提供面向切面的编程实现。</p>
+<p>Web 中的 Servlet 提供了对 Spring MVC 的实现。</p>
+<p><strong>典型的完整 Spring Web 应用程序</strong></p>
+<p><img alt="典型的完整spring-web应用程序" src="index.assets/%E5%85%B8%E5%9E%8B%E7%9A%84%E5%AE%8C%E6%95%B4spring-web%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.png" /></p>
+<p>图中可见，Spring 运行在一个 Servlet 容器中，如 Tomcat。</p>
+<p>Custom domain logic 为开发者编写的业务逻辑。</p>
+<p>WebApplication Context 为业务逻辑的应用上下文，管理 Bean 的生命周期。</p>
 <hr />
 <p>JVM 字节码增强 &amp;&amp; Java Agent</p>
 <p>简单介绍</p>
